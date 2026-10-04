@@ -6,6 +6,12 @@
 # See: https://github.com/github/gitignore/tree/main/Global
 #
 .utmp/
+.idea/
+.codex/
+
+# EOS credentials (ClientSecret / EncryptionKey)
+/[Aa]ssets/[Ss]treaming[Aa]ssets/EOS/eos_*_config.json
+/[Aa]ssets/[Ss]treaming[Aa]ssets/EOS/eos_*_config.json.meta
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
@@ -107,3 +113,4 @@ InitTestScene*.unity*
 
 # Auto-generated cache in Assets folder
 /[Aa]ssets/[Ss]ceneDependencyCache*
+Assets/_Recovery
