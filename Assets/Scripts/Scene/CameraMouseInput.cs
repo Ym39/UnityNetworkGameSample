@@ -28,7 +28,7 @@ public class CameraMouseInput : MonoBehaviour
         targetPosition = Mouse.current.position.ReadValue();  
 #endif
 
-#if UNITY_ANDROID && !UNITY_EDITOR
+#if (UNITY_ANDROID || UNITY_IOS) && !UNITY_EDITOR
         if (Touchscreen.current == null)
         {
             return;
@@ -41,7 +41,7 @@ public class CameraMouseInput : MonoBehaviour
 
         targetPosition = Touchscreen.current.primaryTouch.position.ReadValue();
 #endif
-
+        
         var ray = _camera.ScreenPointToRay(targetPosition);
 
         if (Physics.Raycast(ray, out RaycastHit hit) == false)
